@@ -42,7 +42,7 @@
                         <ul class="nav nav-tabs mb-2" id="custom-content-below-tab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="tab-physical-tab" data-toggle="pill" href="#tab-physical"
-                                    role="tab text-dark">Physical-Chemical Standard</a>
+                                    role="tab text-dark"> Standard Quality</a>
                             </li>
                         </ul>
 
