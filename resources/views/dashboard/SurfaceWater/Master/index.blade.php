@@ -48,7 +48,7 @@
                         @can('admin')
                         <a href="/surfacewater/qualityperiode/codesample" class="btn bg-gradient-info btn-xs ml-1 my-1">Code
                             Sample</a>
-                        <a href="/wastewater/wastewaterstandard" class="btn bg-gradient-info btn-xs  ml-1 my-1">Table
+                        <a href="/surfacewater/standard-quality" class="btn bg-gradient-info btn-xs  ml-1 my-1">Table
                             Standard</a>
                         @endcan
                         <div class=" card-tools p-1 mr-2 form-inline">
