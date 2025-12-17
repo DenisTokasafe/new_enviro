@@ -110,26 +110,26 @@ class ResourceDataEntryController extends Controller
             // } 
 
 
- 
-            if (is_numeric($grafik->standard->conductivity)) {
-                $conductivityStandard[] = doubleval($grafik->standard->conductivity);
+
+            if (is_numeric($grafik->standard->conductivity_standard)) {
+                $conductivityStandard[] = doubleval($grafik->standard->conductivity_standard);
             } else {
                 $conductivityStandard[] = '';
             }
 
-            if (is_numeric($grafik->standard->totalsuspendedsolids_tss)) {
-                $tssStandard[] = doubleval($grafik->standard->totalsuspendedsolids_tss);
+            if (is_numeric($grafik->standard->tss_standard)) {
+                $tssStandard[] = doubleval($grafik->standard->tss_standard);
             } else {
                 $tssStandard[] = '';
             }
-
+ 
             if (is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
                 $tdsStandard[] = doubleval($grafik->standard->totaldissolvedsolids_tds);
             } elseif (!is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
                 $tdsStandard[] = '';
             }
-            if (is_numeric($grafik->do)) {
-                $doStandard[] = doubleval($grafik->standard->dissolvedoxygen_do);
+             if (is_numeric($grafik->do)) {
+                $doStandard[] = doubleval($grafik->standard->do_standard);
             } else {
                 $doStandard[] = '';
             }
