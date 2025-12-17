@@ -31,7 +31,8 @@ class TblStandardQualityPeriodeController extends Controller
     {
         return view('dashboard.SurfaceWater.TblStandardQuality.createandupdate',[
             'tittle' => 'Standard Quality Periode',
-            'breadcrumb' => 'Standard Quality Periode'
+            'breadcrumb' => 'Standard Quality Periode',
+            'data'   => new TblStandardQualityPeriode()
         ]);
     }
 
