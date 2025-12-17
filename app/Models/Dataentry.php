@@ -51,7 +51,7 @@ class Dataentry extends Model
       
     }
     public function standard(){
-    return $this->belongsTo(StandardSurfacewater::class,'standard_id');
+    return $this->belongsTo(TblStandardQualityPeriode::class,'standard_id');
     }
     public function user(){
         return $this->belongsTo(User::class,'user_id');

@@ -6,12 +6,13 @@ use App\Models\Dataentry;
 use App\Models\Codesample;
 use App\Exports\DataExport;
 use App\Imports\DataImport;
+use Hamcrest\Type\IsNumeric;
 use Illuminate\Http\Request;
 use App\Models\Wastewaterstandard;
 use App\Http\Controllers\Controller;
-use Hamcrest\Type\IsNumeric;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
+use App\Models\TblStandardQualityPeriode;
 
 class ResourceDataEntryController extends Controller
 {
@@ -138,7 +139,7 @@ class ResourceDataEntryController extends Controller
  
         return view('dashboard.SurfaceWater.Master.index', [
             'code_units' => Codesample::all(),
-            'QualityStandard' => Wastewaterstandard::all(),
+            'QualityStandard' => TblStandardQualityPeriode::all(),
             'tittle' => 'Surface Water',
             'breadcrumb' => 'Surface Water',
             'date' => $tanggal,

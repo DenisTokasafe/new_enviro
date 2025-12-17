@@ -217,44 +217,44 @@
                                             @else
                                             <td>{{$data->stop_time}}</td>
                                             @endif
-                                            <td>{{ $data->standard->totalsuspendedsolids_tss }}</td>
+                                            <td>{{ $data->standard->tss_standard }}</td>
 
                                             @If($data->tss==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{$data->tss}}</td>
                                             @endif
-                                            <td>{{ $data->standard->ph_min }}-{{$data->standard->ph_max}}</td>
+                                            <td>{{ $data->standard->ph_min_standard }}-{{$data->standard->	ph_max_standard}}</td>
                                             @If($data->ph==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{$data->ph}}</td>
                                             @endif
-                                            <td>{{ $data->standard->dissolvedoxygen_do }}</td>
+                                            <td>{{ $data->standard->do_standard }}</td>
                                             @If($data->do==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{$data->do}}</td>
                                             @endif
-                                            <td>{{ $data->standard->redox }}</td>
+                                            <td>{{ $data->standard->redox_standard }}</td>
                                             @If($data->orp==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{$data->orp}}</td>
                                             @endif
-                                            <td>{{ $data->standard->conductivity }}</td>
+                                            <td>{{ $data->standard->conductivity_standard }}</td>
                                             @If($data->conductivity==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{$data->conductivity}}</td>
                                             @endif
-                                            <td>{{ $data->standard->totaldissolvedsolids_tds }}</td>
+                                            <td></td>
                                             @If($data->tds==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{$data->tds}}</td>
                                             @endif
-                                            <td>{{ $data->standard->temperature }}</td>
+                                            <td>{{ $data->standard->temperatur_standard }}</td>
                                             @If($data->temperatur==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
