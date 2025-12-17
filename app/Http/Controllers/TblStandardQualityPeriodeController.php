@@ -29,7 +29,7 @@ class TblStandardQualityPeriodeController extends Controller
      */
     public function create()
     {
-        return view('dashboard.SurfaceWater.TblStandardQuality.create',[
+        return view('dashboard.SurfaceWater.TblStandardQuality.createandupdate',[
             'tittle' => 'Standard Quality Periode',
             'breadcrumb' => 'Standard Quality Periode'
         ]);
