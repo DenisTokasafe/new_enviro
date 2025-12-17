@@ -34,10 +34,7 @@
                             <a href="{{ route('standard-quality.create') }}" class="btn bg-gradient-secondary btn-xs">
                                 <i class="fas fa-plus mr-1"></i>Add Data
                             </a>
-                            <a href="#" class="btn bg-gradient-secondary btn-xs" data-toggle="modal"
-                                data-target="#modal-default">
-                                <i class="fas fa-upload mr-1"></i>Excel
-                            </a>
+                           
                         </h3>
                     </div>
 
