@@ -15,7 +15,11 @@ class TblStandardQualityPeriodeController extends Controller
     public function index()
     {
         $data = TblStandardQualityPeriode::all();
-        return view('dashboard.SurfaceWater.TblStandardQuality.index', compact('data'));
+        return view('dashboard.SurfaceWater.TblStandardQuality.index',[
+            'data' => $data,
+            'tittle' => 'Standard Quality Periode',
+            'breadcrumb' => 'Standard Quality Periode'
+        ]);
     }
 
     /**
