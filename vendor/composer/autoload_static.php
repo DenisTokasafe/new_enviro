@@ -336,8 +336,8 @@ class ComposerStaticInitcbce0072526c7c5905bde2e235a8c3bd
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -803,6 +803,7 @@ class ComposerStaticInitcbce0072526c7c5905bde2e235a8c3bd
         'App\\Models\\TailingCodeId' => __DIR__ . '/../..' . '/app/Models/TailingCodeId.php',
         'App\\Models\\TailingQualityStandard' => __DIR__ . '/../..' . '/app/Models/TailingQualityStandard.php',
         'App\\Models\\TblStandard' => __DIR__ . '/../..' . '/app/Models/TblStandard.php',
+        'App\\Models\\TblStandardQualityPeriode' => __DIR__ . '/../..' . '/app/Models/TblStandardQualityPeriode.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\Wastewater' => __DIR__ . '/../..' . '/app/Models/Wastewater.php',
         'App\\Models\\Wastewaterpointid' => __DIR__ . '/../..' . '/app/Models/Wastewaterpointid.php',

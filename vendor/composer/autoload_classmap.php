@@ -257,6 +257,7 @@ return array(
     'App\\Models\\TailingCodeId' => $baseDir . '/app/Models/TailingCodeId.php',
     'App\\Models\\TailingQualityStandard' => $baseDir . '/app/Models/TailingQualityStandard.php',
     'App\\Models\\TblStandard' => $baseDir . '/app/Models/TblStandard.php',
+    'App\\Models\\TblStandardQualityPeriode' => $baseDir . '/app/Models/TblStandardQualityPeriode.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\Wastewater' => $baseDir . '/app/Models/Wastewater.php',
     'App\\Models\\Wastewaterpointid' => $baseDir . '/app/Models/Wastewaterpointid.php',
