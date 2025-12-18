@@ -120,22 +120,23 @@ class ResourceDataEntryController extends Controller
                 $conductivityStandard[] = null;
             }
 
-            if (is_numeric($grafik->standard->tss_standard)) {
-                $tssStandard[] = doubleval($grafik->standard->tss_standard);
-            } else {
-                $tssStandard[] = '';
-            }
+            // 1. TSS Standard
+            $tssVal = $grafik->standard->tss_standard ?? null;
+            $tssStandard[] = is_numeric($tssVal) ? (float) $tssVal : null;
 
-            if (is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
-                $tdsStandard[] = doubleval($grafik->standard->totaldissolvedsolids_tds);
-            } elseif (!is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
-                $tdsStandard[] = '';
-            }
-            if (is_numeric($grafik->do)) {
-                $doStandard[] = doubleval($grafik->standard->do_standard);
-            } else {
-                $doStandard[] = '';
-            }
+            // 2. TDS Standard
+            $tdsVal = $grafik->standard->totaldissolvedsolids_tds ?? null;
+            $tdsStandard[] = is_numeric($tdsVal) ? (float) $tdsVal : null;
+
+            // 3. DO Standard
+            // Catatan: Di kode asli Anda tertulis is_numeric($grafik->do), 
+            // pastikan ini bukan typo dan memang ingin mengecek data asli sebelum ambil data standard
+            $doVal = $grafik->standard->do_standard ?? null;
+            $doStandard[] = is_numeric($doVal) ? (float) $doVal : null;
+
+            // 4. Parameter lainnya (opsional, contoh: Redox)
+            $redoxVal = $grafik->standard->redox_standard ?? null;
+            $redoxStandard[] = is_numeric($redoxVal) ? (float) $redoxVal : null;
         }
 
         $main = Dataentry::with('user')->orderBy('date', 'desc')->filter(request(['fromDate', 'search', 'search1', 'search2']))->paginate($table)->withQueryString();
