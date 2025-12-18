@@ -217,7 +217,7 @@
                                             @else
                                             <td>{{$data->stop_time}}</td>
                                             @endif
-                                            <td>{{ $data->standard->tss_standard }}</td>
+                                            <td>{{ $data->standard->tss_standard??'' }}</td>
 
                                             @If($data->tss==='no data')
                                             <td style="color: red;">No Data</td>
