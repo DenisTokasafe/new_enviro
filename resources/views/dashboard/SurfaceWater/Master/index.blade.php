@@ -250,7 +250,7 @@
                                             @else
                                             <td>{{$data->tds}}</td>
                                             @endif
-                                            <td>{{ $data->standard->temperatur_standard ??'' }}</td>
+                                            <td>{{ $data->standard->temperatur_standard ??'' }} <sup>0</sup>C</td>
                                             @If($data->temperatur==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
