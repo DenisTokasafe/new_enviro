@@ -236,7 +236,7 @@
                                             @else
                                             <td>{{$data->do}}</td>
                                             @endif
-                                            <td>{{ $data->standard->redox_standard }}</td>
+                                            <td>{{ $data->standard->redox_standard??'' }}</td>
                                             @If($data->orp==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
