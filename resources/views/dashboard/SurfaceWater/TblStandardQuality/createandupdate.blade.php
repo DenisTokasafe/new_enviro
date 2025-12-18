@@ -125,16 +125,17 @@
                                     </div>
                                 </div>
                                 {{-- Field TDS --}}
-                                <div class="col-md-6 col-sm-12 mb-3"></div>
-                                <div class="row">
-                                    <label class="col-sm-4 col-form-label">TDS Standard</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" name="tds_standard"
-                                            value="{{ old('tds_standard', $data->tds_standard) }}"
-                                            class="form-control form-control-sm @error('tds_standard') is-invalid @enderror">
-                                        @error('tds_standard')
-                                            <span class="invalid-feedback">{{ $message }}</span>
-                                        @enderror
+                                <div class="col-md-6 col-sm-12 mb-3">
+                                    <div class="row">
+                                        <label class="col-sm-4 col-form-label">Conductivity Standard</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="conductivity_standard"
+                                                value="{{ old('tds_standard', $data->tds_standard) }}"
+                                                class="form-control form-control-sm @error('tds_standard') is-invalid @enderror">
+                                            @error('tds_standard')
+                                                <span class="invalid-feedback">{{ $message }}</span>
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
