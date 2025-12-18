@@ -224,13 +224,13 @@
                                             @else
                                             <td>{{$data->tss}}</td>
                                             @endif
-                                            <td>{{ $data->standard->ph_min_standard }}-{{$data->standard->	ph_max_standard}}</td>
+                                            <td>{{ $data->standard->ph_min_standard ??'' }}-{{$data->standard->ph_max_standard ??''}}</td>
                                             @If($data->ph==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{$data->ph}}</td>
                                             @endif
-                                            <td>{{ $data->standard->do_standard }}</td>
+                                            <td>{{ $data->standard->do_standard??'' }}</td>
                                             @If($data->do==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
@@ -242,7 +242,7 @@
                                             @else
                                             <td>{{$data->orp}}</td>
                                             @endif
-                                            <td>{{ $data->standard->conductivity_standard }}</td>
+                                            <td>{{ $data->standard->conductivity_standard??'' }}</td>
                                             @If($data->conductivity==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
@@ -254,7 +254,7 @@
                                             @else
                                             <td>{{$data->tds}}</td>
                                             @endif
-                                            <td>{{ $data->standard->temperatur_standard }}</td>
+                                            <td>{{ $data->standard->temperatur_standard??'' }}</td>
                                             @If($data->temperatur==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
