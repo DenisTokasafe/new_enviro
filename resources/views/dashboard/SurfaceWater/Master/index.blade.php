@@ -112,7 +112,6 @@
                             </form>
                         </div>
                     </div>
-
                     <div class="card-body table-responsive ">
                         <section class="content ">
                             @can('admin')
@@ -124,10 +123,8 @@
                                         <i class="fas fa-upload mr-1"></i>Exel
                                     </a>
                                 </div>
-
                             </div>
                             @endcan
-
                             <div class="table-responsive card card-primary card-outline">
                                 <table role="grid" class="table table-striped table-bordered dt-responsive nowrap table-sm">
                                     <thead style=" color:#005245">
@@ -201,7 +198,6 @@
                                                             <i class="fas fa-trash"></i>
                                                         </button>
                                                     </form>
-
                                                 </div>
                                             </td>
                                             @endcan
@@ -254,14 +250,13 @@
                                             @else
                                             <td>{{$data->tds}}</td>
                                             @endif
-                                            <td>{{ $data->standard->temperatur_standard??'' }}</td>
+                                            <td>{{ $data->standard->temperatur_standard ??'' }}</td>
                                             @If($data->temperatur==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else
                                             <td>{{ $data->temperatur }}<sup>0</sup>C
                                             </td>
                                             @endif
-
                                             <td>{{ $data->salinity }}</td>
                                             <td>{{ $data->turbidity }}</td>
                                             <td>{{ $data->cyanide}}</td>
