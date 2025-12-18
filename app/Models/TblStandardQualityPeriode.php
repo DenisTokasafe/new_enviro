@@ -17,4 +17,12 @@ class TblStandardQualityPeriode extends Model
         'conductivity_standard',
         'temperatur_standard',
     ];
+    // Tambahkan ini
+    protected $casts = [
+        'tss_standard'          => 'double',
+        'do_standard'           => 'double',
+        'redox_standard'        => 'double',
+        'conductivity_standard' => 'double',
+        'temperatur_standard'   => 'double',
+    ];
 }
