@@ -5,7 +5,7 @@
     <!-- Brand Logo -->
     <a href="/" class="brand-link navbar-dark ">
         <img src="/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image " style="opacity: .8">
-        <!-- <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:aliceblue" class="brand-text ">Archi Indonesia</span> -->
+        <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:aliceblue" class="brand-text ">Entry</span> 
     </a>
 
     <!-- Sidebar -->
