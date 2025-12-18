@@ -52,6 +52,7 @@ class TblStandardQualityPeriodeController extends Controller
             'do_standard'           => 'required',
             'redox_standard'        => 'required',
             'conductivity_standard' => 'required',
+            'tds_standard'           => 'required',
             'temperatur_standard'   => 'required',
         ]);
 
@@ -108,6 +109,7 @@ class TblStandardQualityPeriodeController extends Controller
             'do_standard'           => 'required|numeric',
             'redox_standard'        => 'required|numeric',
             'conductivity_standard' => 'required|numeric',
+            'tds_standard'           => 'required|numeric',
             'temperatur_standard'   => 'required|numeric',
         ]);
 
