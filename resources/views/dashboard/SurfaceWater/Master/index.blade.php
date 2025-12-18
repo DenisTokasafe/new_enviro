@@ -248,7 +248,7 @@
                                             @else
                                             <td>{{$data->conductivity}}</td>
                                             @endif
-                                            <td></td>
+                                            <td>{{ $data->standard->tds_standard??'' }}</td>
                                             @If($data->tds==='no data')
                                             <td style="color: red;">No Data</td>
                                             @else

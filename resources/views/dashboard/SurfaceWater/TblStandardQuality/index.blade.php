@@ -55,9 +55,12 @@
                                                 <tr>
                                                     <th class="align-middle">No</th>
                                                     <th class="align-middle">TSS Standard</th>
+                                                    <th class="align-middle">PH Min Standard</th>
+                                                    <th class="align-middle">PH Max Standard</th>
                                                     <th class="align-middle">DO Standard</th>
                                                     <th class="align-middle">Redox Standard</th>
                                                     <th class="align-middle">Conductivity Standard</th>
+                                                    <th class="align-middle">TDS Standard</th>
                                                     <th class="align-middle">Temperature Standard</th>
                                                     <th class="align-middle">Action</th>
                                                 </tr>
@@ -70,9 +73,12 @@
                                                     <tr>
                                                          <td>{{ $no++ }}</td>
                                                         <td>{{ $item->tss_standard }}</td>
+                                                        <td>{{ $item->ph_min_standard }}</td>
+                                                        <td>{{ $item->ph_max_standard }}</td>
                                                         <td>{{ $item->do_standard }}</td>
                                                         <td>{{ $item->redox_standard }}</td>
                                                         <td>{{ $item->conductivity_standard }}</td>
+                                                        <td>{{ $item->tds_standard }}</td>
                                                         <td>{{ $item->temperatur_standard }}°C</td>
                                                         <td>
                                                             <a href="{{ route('standard-quality.edit', $item->id) }}"

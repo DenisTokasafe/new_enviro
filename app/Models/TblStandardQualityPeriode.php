@@ -12,6 +12,7 @@ class TblStandardQualityPeriode extends Model
         'tss_standard',
         'ph_min_standard',
         'ph_max_standard',
+        'tds_standard',
         'do_standard',
         'redox_standard',
         'conductivity_standard',
@@ -24,5 +25,8 @@ class TblStandardQualityPeriode extends Model
         'redox_standard'        => 'double',
         'conductivity_standard' => 'double',
         'temperatur_standard'   => 'double',
+        'tds_standard'           => 'double',
+        'ph_min_standard'       => 'double',
+        'ph_max_standard'       => 'double',
     ];
 }
