@@ -30,10 +30,10 @@ class ResourceDataEntryController extends Controller
         } else
             $table = ($lastDayofPreviousMonth - $firstDayofPreviousMonth) / 86400;
 
-     
-            $grafiks =Dataentry::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
 
-   
+        $grafiks = Dataentry::with('user')->orderBy('date', 'desc')->filter(request(['fromDate', 'search', 'search1', 'search2']))->paginate($table)->withQueryString();
+
+
         $tanggal = [];
         $suhu = [];
         $conductivity = [];
@@ -85,7 +85,6 @@ class ResourceDataEntryController extends Controller
                 $ph[] =  doubleval($grafik->ph); # code...
                 $phMax[] = 9;
                 $phMin[] = 6;
-
             } else {
                 $ph[] = '';
             }
@@ -102,7 +101,7 @@ class ResourceDataEntryController extends Controller
             if (!is_numeric($grafik->ph)) {
                 $phMax[] = '';
                 $phMin[] = '';
-            } 
+            }
             // elseif (is_numeric($grafik->standard->ph_max) && $grafik->standard->ph_min) 
             // {
             //     $phMax[] = 9;
@@ -111,10 +110,14 @@ class ResourceDataEntryController extends Controller
 
 
 
-            if (is_numeric($grafik->standard->conductivity_standard)) {
-                $conductivityStandard[] = doubleval($grafik->standard->conductivity_standard);
+            // Pastikan relasi standard ada sebelum mengambil nilainya
+            $val = $grafik->standard->conductivity_standard ?? null;
+
+            if (is_numeric($val)) {
+                $conductivityStandard[] = (float) $val;
             } else {
-                $conductivityStandard[] = '';
+                // Gunakan null, jangan string kosong '', agar grafik tidak error
+                $conductivityStandard[] = null;
             }
 
             if (is_numeric($grafik->standard->tss_standard)) {
@@ -122,21 +125,21 @@ class ResourceDataEntryController extends Controller
             } else {
                 $tssStandard[] = '';
             }
- 
+
             if (is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
                 $tdsStandard[] = doubleval($grafik->standard->totaldissolvedsolids_tds);
             } elseif (!is_numeric($grafik->standard->totaldissolvedsolids_tds)) {
                 $tdsStandard[] = '';
             }
-             if (is_numeric($grafik->do)) {
+            if (is_numeric($grafik->do)) {
                 $doStandard[] = doubleval($grafik->standard->do_standard);
             } else {
                 $doStandard[] = '';
             }
         }
-  
-        $main =Dataentry::with('user')->orderBy('date','desc')->filter(request(['fromDate', 'search','search1','search2']))->paginate($table)->withQueryString();
- 
+
+        $main = Dataentry::with('user')->orderBy('date', 'desc')->filter(request(['fromDate', 'search', 'search1', 'search2']))->paginate($table)->withQueryString();
+
         return view('dashboard.SurfaceWater.Master.index', [
             'code_units' => Codesample::all(),
             'QualityStandard' => TblStandardQualityPeriode::all(),
